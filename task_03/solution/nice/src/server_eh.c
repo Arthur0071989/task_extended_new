@@ -21,12 +21,12 @@ static int handle_event(event_handler *self, const struct epoll_event * e) {
 		exit(1); //close app
 	}
 	eh_eh = create_client_eh(eh_fd);
-	self->ctx->r->add_eh(r, eh_eh);
+	self->ctx->r->add_eh(self->ctx->r, eh_eh);
 	return 0;
 }
 
 event_handler * create_server_eh (reactor * r) {
-	event_handler seh = malloc(sizeof(event_handler));
+	event_handler * seh = malloc(sizeof(event_handler));
 	eh_ctx * ctx = malloc(sizeof(eh_ctx));
 	ctx->fd=socket(AF_INET, S_NONBLOCK|SOCK_STREAM, 0);
 	//error handling
