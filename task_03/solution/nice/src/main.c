@@ -22,7 +22,9 @@ int main(int argc, const char *argv[])
 {
 	int i = 0;
 
-	int srv_fd = -1;
+
+
+		int srv_fd = -1;
 	int epoll_fd = -1;
 
 	struct epoll_event es[MAX_USERS];

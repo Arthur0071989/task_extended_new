@@ -15,7 +15,7 @@
 #######################################################
 CFLAGS = -Wall -g
 LDFLAGS =
-SOURCES = ../src/main.c ../src/user_list.c ../src/ru.c
+SOURCES = src/server_eh.c src/mainn.c
 NAME = prog
 #######################################################
 ##########        END User part              ##########
